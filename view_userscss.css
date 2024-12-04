@@ -1,0 +1,67 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+    background-color: #f0f2f5; /* Light background */
+    color: #333; /* Text color */
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center; /* Centers the content */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.50); /* Adds shadow for depth */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Table header and cell styling */
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Table header styling with yellow-orange gradient */
+th {
+    background: linear-gradient(135deg, #FDB813 0%, #FFB81C 100%); /* Yellow-Orange gradient */
+    color: white;
+    font-weight: bold;
+}
+
+/* Image button styling */
+.buttonv1 {
+    display: inline-block;
+    width: 30px; /* Set a specific size for the image */
+    height: 30px; /* Set a specific height for the image */
+    object-fit: contain; /* Ensures the image maintains aspect ratio without distortion */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for image buttons */
+.buttonv1:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+/* Optional: Margin between links (buttons) */
+td a {
+    margin: 0 10px; /* Spacing between the buttons */
+    text-decoration: none; /* Remove underline from image links */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table, td, th {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .buttonv1 {
+        width: 25px; /* Make image buttons smaller on mobile */
+        height: 25px;
+    }
+}

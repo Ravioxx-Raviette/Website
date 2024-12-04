@@ -1,0 +1,147 @@
+/* Reset styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center; /* Centers the container horizontally */
+}
+
+/* Main container for content */
+.container {
+    width: 100%;
+    max-width: 400px; /* Responsive width */
+    margin: 40px auto; /* Centered container with margin */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for more depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Hover effect to lift the container */
+}
+
+/* Heading styling */
+h2 {
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Label styling */
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+    text-transform: uppercase; /* Adds a cleaner, modern look */
+    letter-spacing: 1px; /* Adds spacing between letters */
+}
+
+/* Boxed styling for the input fields and labels */
+.input-box {
+    background-color: #fafafa;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px; /* Margin between the input box and the submit button */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added shadow to input box */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+/* Styling for input fields */
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box input[type="password"] {
+    width: calc(100% - 24px); /* Ensures the input fields fit within the container */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text for better readability */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on focus */
+}
+
+/* Input hover and focus styling */
+.input-box input[type="text"]:hover,
+.input-box input[type="email"]:hover,
+.input-box input[type="password"]:hover {
+    border-color: #3498db; /* Light blue border on hover */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Light blue glow on hover */
+}
+
+.input-box input[type="text"]:focus,
+.input-box input[type="email"]:focus,
+.input-box input[type="password"]:focus {
+    border-color: #3498db; /* Blue border on focus */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Blue glow on focus */
+    outline: none; /* Remove outline on focus */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 12px 25px; /* Larger padding for a bolder look */
+    border-radius: 6px;
+    margin-top: 20px; /* Increased margin to position the button lower */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for a floating effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+/* Error message styling */
+.error {
+    color: #c0392b;
+    background-color: #fdecea;
+    border: 1px solid #e74c3c;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center; /* Centers the error message */
+}
+
+/* Footer styling */
+footer {
+    color: #666;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #2980b9;
+}

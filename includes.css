@@ -1,0 +1,356 @@
+/* Reset styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center; /* Centers the container horizontally */
+}
+
+/* Container for main content */
+.container {
+    width: 100%;
+    max-width: 400px; /* Responsive width */
+    margin: 40px auto; /* Centering the container */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styling */
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5em; /* Large heading size */
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2em; /* Medium heading size */
+}
+
+/* Label styling */
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+}
+
+/* Error message styling */
+.error {
+    color: #c0392b;
+    background-color: #fdecea;
+    border: 1px solid #e74c3c;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Footer styling */
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333; /* Base text color */
+    line-height: 1.6;
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #555;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #2980b9;
+}
+
+/* Navigation styles */
+#navigation {
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+#navigation a:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* Info column styles */
+#info-col {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border-radius: 8px;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Make sure it's visible on the right */
+    width: 250px; /* Fixed width for consistency */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    z-index: 1000;
+}
+
+#info-col p {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+#info-col p:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#content_for_delete {
+    background: #fff;
+    border-radius: 12px; /* Smooth rounded corners */
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* Larger shadow for a floating effect */
+    width: 100%;
+    max-width: 650px; /* Limit the width to make it look more contained */
+    margin: 40px auto;
+    position: absolute; /* Use absolute positioning to center it on the page */
+    top: 50%; /* 50% from the top of the viewport */
+    left: 50%; /* 50% from the left of the viewport */
+    transform: translate(-50%, -50%); /* Offset the element to ensure true centering */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000;
+    animation: fadeInUp 0.5s ease-out; /* Smooth fade-in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Start from 60% above the center */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* End at the centered position */
+    }
+}
+
+#content_for_delete h2 {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark gray for the title */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#content_for_delete h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+#content_for_delete p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.delete-form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for the delete confirmation buttons */
+.button-delete, .button-cancel {
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for buttons */
+    font-weight: bold;
+}
+
+/* Style for 'Yes' (Delete) button */
+.button-delete {
+    background: linear-gradient(135deg, #FDB813 0%, #FFB81C 100%); /* Yellow-Orange gradient */
+    color: white;
+}
+
+.button-delete:hover {
+    background: linear-gradient(135deg, #FFB81C 0%, #FDB813 100%); /* Inverse gradient effect on hover */
+    transform: scale(1.05);
+}
+
+/* Style for 'No' (Cancel) button */
+.button-cancel {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); /* Blue gradient */
+    color: white;
+}
+
+.button-cancel:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #3498db 100%); /* Inverse gradient effect on hover */
+    transform: scale(1.05);
+}
+
+/* Make the cancel and delete buttons responsive on smaller screens */
+@media (max-width: 600px) {
+    #content_for_delete {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .delete-form {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 15px;
+    }
+}
+
+#content_for_edit {
+    background: #fff;
+    border-radius: 12px; /* Smooth rounded corners */
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* Floating effect */
+    width: 100%;
+    max-width: 650px; /* Consistent width */
+    margin: 40px auto;
+    position: absolute; /* Centered positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000;
+    animation: fadeInUp 0.5s ease-out; /* Smooth fade-in animation */
+}
+
+#content_for_edit h2 {
+    font-size: 2.5em;
+    color: #2c3e50; /* Darker shade */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#content_for_edit h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Styling for input fields */
+#content_for_edit input[type="text"],
+#content_for_edit input[type="email"] {
+    width: 100%; /* Use full width of the container */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#content_for_edit input[type="text"]:focus,
+#content_for_edit input[type="email"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2); /* Blue shadow on focus */
+}
+
+/* Style for 'Save Changes' button */
+#content_for_edit .button-edit {
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 180px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); /* Green gradient */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#content_for_edit .button-edit:hover {
+    background: linear-gradient(135deg, #388E3C 0%, #4CAF50 100%); /* Inverse gradient on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Message styling */
+#content_for_edit .message {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    #content_for_edit {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    #content_for_edit input[type="text"],
+    #content_for_edit input[type="email"] {
+        width: 100%;
+    }
+}

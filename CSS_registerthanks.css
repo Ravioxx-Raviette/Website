@@ -1,0 +1,56 @@
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  background-color: #f0f2f5; /* Light background */
+  color: #333; /* Text color */
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center; /* Centers the content */
+}
+
+/* Main container styling */
+.container {
+  width: 100%;
+  max-width: 500px; /* Adjusted max width for balance */
+  margin: 40px auto; /* Centered container with margin */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px; /* Slightly smaller radius for a more traditional look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow for a more subtle depth */
+  transition: none; /* Removed hover transition */
+}
+
+/* Heading styling */
+h1 {
+  color: #2c3e50; /* Dark text color for readability */
+  font-size: 24px; /* Standard heading size */
+  font-weight: 500; /* Normal weight for a more balanced look */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* Paragraph styling */
+p {
+  font-size: 16px; /* Standard text size for paragraphs */
+  text-align: center; /* Ensures the text is centered */
+  color: #555; /* Slightly lighter color than the body text */
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  margin-top: 20px; /* Standard margin */
+  padding: 12px 25px; /* Consistent padding */
+  background-color: #3498db; /* Bright blue color */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500; /* Regular weight */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
